@@ -47,9 +47,9 @@
 |BlackScr |Blackout curtain opening  |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |PipeLow |Rail pipe Temperature (Lower circuit) |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |PipeGrow |Crop pipe Temperature (Growth circuit) |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|co2\_dos |CO2 dosing  |kg/ha hour |5 min |GreenhouseClimate |Processed data |<p>Computed CO2 dosage and calibrated by monthly CO -</p><p>2 meter readings.  </p>||
+|co2\_dos |CO2 dosing  |kg/ha hour |5 min |GreenhouseClimate |Processed data |Computed CO2 dosage and calibrated by monthly CO2 meter readings.||
 |Tot\_PAR |Total inside PAR  (Sun + HPS + LED) |µmol/m² s |5 min |GreenhouseClimate |Processed data |Computed based on outdoor PAR, cover transmissivity (0.5), operation and transmissivity of energy (0.75) and blackout screens (0.02), PAR from LED and HPS. ||
-|Tot\_PAR\_Lamps |PAR sum from HPS and LED lamps |µmol/m² s |5 min |GreenhouseClimate |Processed data |<p>Computed based on lamps’ operation and measured PPFD contribution of HPS (100 µmol/m² s) and LED (Blue = 11, Red = 49, Farred </p><p>- 0, White = 37 µmol/m² s) when set at maximum range of LED proportional control (=1000) </p>||
+|Tot\_PAR\_Lamps |PAR sum from HPS and LED lamps |µmol/m² s |5 min |GreenhouseClimate |Processed data |Computed based on lamps’ operation and measured PPFD contribution of HPS (100 µmol/m² s) and LED (Blue = 11, Red = 49, Farred = 0, White = 37 µmol/m² s) when set at maximum range of LED proportional control (=1000)||
 |EC\_drain\_PC |Drain EC  |dS/m |5 min |GreenhouseClimate |Raw data |- |Process Computer |
 |pH\_drain\_PC |Drain pH  |[-] |5 min |GreenhouseClimate |Raw data |- |Process Computer |
 |Water\_sup |Cumulative number of minutes of irrigation in a day |minutes |5 min |GreenhouseClimate |Raw data |This cumulation is reset to 0 at midnight. |Process Computer |
@@ -71,7 +71,7 @@
 |t\_vent\_sp |Ventilation temperature setpoint (leeward vents) |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |window\_pos\_lee\_sp |Lee side window position minimum setpoint (leeward vents) |% |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |water\_sup\_int\_sp\_min |Water supply interval time setpoint |minutes |5 min  |GreenhouseClimate |Raw data |Interval time between the last and next irrigation turn.  |Process Computer |
-|int\_blue\_sp |Intensity set of blue spectrum channel  (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |LED light control was coupled with HPS control ,that is LED lamps can only be used when the HPS-lamps are switched on as well. |Heliospectra lamps |
+|int\_blue\_sp |Intensity set of blue spectrum channel  (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |LED light control was coupled with HPS control, that is LED lamps can only be used when the HPS-lamps are switched on as well. |Heliospectra lamps |
 |int\_red\_sp |Intensity set of red spectrum channel  (LED lamps) |[0 to 1000] range of proportional control|5 min  |GreenhouseClimate |Raw data |As above |Heliospectra lamps |
 |int\_farred\_sp |Intensity set of far-red spectrum channel  (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |As above |Heliospectra lamps |
 |int\_white\_sp |Intensity set of white spectrum channel  (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |As above |Heliospectra lamps |
@@ -94,7 +94,7 @@
 |window\_pos\_lee\_vip |Lee side window position minimum VIP (leeward vents) |% |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |t\_ventwind\_vip |Ventilation temperature VIP (windward side) |°C |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |water\_sup\_int\_vip\_min |Water supply interval time VIP |minutes |5 min  |GreenhouseClimate |Raw data |Interval time between the last and next irrigation turn |Process Computer |
-|int\_blue\_vip |Intensity set of blue spectrum channel  VIP (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |LED light control was coupled with HPS control ,that is LED lamps can only be used when the HPS- lamps are switched on as well. |Heliospectra lamps |
+|int\_blue\_vip |Intensity set of blue spectrum channel  VIP (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |LED light control was coupled with HPS control, that is LED lamps can only be used when the HPS- lamps are switched on as well. |Heliospectra lamps |
 |int\_red\_vip |Intensity set of red spectrum channel VIP (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |As above |Heliospectra lamps |
 |int\_farred\_vip |Intensity set of far-red spectrum channel VIP (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |As above |Heliospectra lamps |
 |int\_white\_vip |Intensity set of white spectrum channel VIP (LED lamps) |[0 to 1000] range of proportional control |5 min  |GreenhouseClimate |Raw data |As above |Heliospectra lamps |
@@ -105,14 +105,14 @@
 
 |**Column heading** |**Parameter description** |**Unit** |**Interval** |**Dataset name** |**Data Type** |**Comments** |**Data collection/source** |
 | - | :- | - | - | - | - | - | :- |
-|ProdA |Total tomato Production quality class  A  |kg/m²  |at date (harvest) |Production |<p>` `Processed </p><p>data </p>|Conversion g to kg/m²  (production area = 62.5 m²). The harvest was performed per truss. Class A means first quality trusses that can be commercially traded. |Manual registration  |
-|ProdB |Total tomato Production quality class  B |kg/m²   |at date (harvest) |Production |<p>` `Processed </p><p>data </p>|Conversion g to kg/m²  (production area = 62.5 m²).  The harvest was performed per truss. Class B refers to trusses that cannot be commercially traded. |Manual registration  |
-|avg\_nr\_harvested\_trusses |Number of harvested trusses (average ) |Number/stem |at date (harvest) |Production |<p>` `Processed </p><p>data </p>|This refers to 10 sample stems (average value) |Manual registration  |
-|Truss development time  |Truss growing period from flowering to harvest  |days |at date (harvest) |Production |<p>` `Processed </p><p>data </p>|<p>This refers to 10 sample stems (average value).  </p><p>The growing period of a truss is considered to start when at a particular “flowering” truss at least 5 flowers are set.  </p>|Manual registration  |
+|ProdA |Total tomato Production quality class  A  |kg/m²  |at date (harvest) |Production |` `Processed data |Conversion g to kg/m²  (production area = 62.5 m²). The harvest was performed per truss. Class A means first quality trusses that can be commercially traded. |Manual registration  |
+|ProdB |Total tomato Production quality class  B |kg/m²   |at date (harvest) |Production |` `Processed data |Conversion g to kg/m²  (production area = 62.5 m²).  The harvest was performed per truss. Class B refers to trusses that cannot be commercially traded. |Manual registration  |
+|avg\_nr\_harvested\_trusses |Number of harvested trusses (average ) |Number/stem |at date (harvest) |Production |` `Processed data |This refers to 10 sample stems (average value) |Manual registration  |
+|Truss development time  |Truss growing period from flowering to harvest  |days |at date (harvest) |Production |` `Processed data |This refers to 10 sample stems (average value).  The growing period of a truss is considered to start when at a particular “flowering” truss at least 5 flowers are set.  |Manual registration  |
 |Nr\_fruits\_ClassA |Number of harvested fruits  quality class A|Number  |at date (harvest) |Production |` `Raw data |This refers to 10 sample stems (total value) |Manual registration  |
-|Weight\_fruits\_ClassA |<p>Total weight harvested fruits  </p><p>quality class A</p>|g |at date (harvest) |Production |` `Raw data |This refers to 10 sample stems (total value) |Manual registration  |
+|Weight\_fruits\_ClassA |Total weight harvested fruits  quality class A|g |at date (harvest) |Production |` `Raw data |This refers to 10 sample stems (total value) |Manual registration  |
 |Nr\_fruits\_ClassB |Number of harvested fruits  quality class B|Number  |at date (harvest) |Production |` `Raw data |This refers to 10 sample stems (total value) |Manual registration  |
-|Weight\_fruits\_ClassB |<p>Total weight harvested fruits  </p><p>quality class B</p>|g |at date (harvest) |Production |` `Raw data |This refers to 10 sample stems (total value) |Manual registration  |
+|Weight\_fruits\_ClassB |Total weight harvested fruits  quality class B|g |at date (harvest) |Production |` `Raw data |This refers to 10 sample stems (total value) |Manual registration  |
 |Time |Timestamp date (Excel format) |||||||
 ## Crop parameters 
 
@@ -132,7 +132,7 @@ Resources
 
 |**Column heading** |**Parameter description** |**Unit** |**Interva l** |**Dataset name** |**Data Type** |**Comments** |**Data collection/sourc**  **e** |
 | - | - | - | - | - | - | - | :- |
-|Heat\_cons |Heating energy consumption (rail + crop pipes) |MJ/m²  day |daily  |Resources |Processed data |<p>Computation based on the sum of heat release (W/m²) from heating pipes </p><p>(when on):  HeatPipe= (t\_rail- tair)\*2.1 + (t\_grow- t\_air)\*0.62.  Final conversion into MJ/day.  </p>||
+|Heat\_cons |Heating energy consumption (rail + crop pipes) |MJ/m²  day |daily  |Resources |Processed data |Computation based on the sum of heat release (W/m²) from heating pipes (when on):  HeatPipe= (t\_rail- tair)\*2.1 + (t\_grow- t\_air)\*0.62.  Final conversion into MJ/day.  ||
 |ElecHigh |Electricity consumption (artificial light) during pick-hours (7.00 -23.00) |kWh/m 2 day |daily  |Resources |Processed data |Computation based on lamps’ operation during pick-hours, measured electricity consumption of HPS (81 W/m2) and LED (Blue=7.27 ; Red= 25.3; Farred= 6.23; White=22.72 W/m²). Conversion into KWh. ||
 |ElecLow |Electricity consumption (artificial light) during off-pick-hours |kWh/m2  day |daily  |Resources |Processed data |Computation based on lamps’ operation during off-pick-hours, electricity consumption of HPS (81 W/m2) and LED (Blue=7.27 ; Red= 25.3; Farred= 6.23; White=22.72 W/m²). Conversion into KWh.||
 |CO2\_cons |CO2 consumption  |kg/m²  day |daily  |Resources |Processed data |Computed based on CO2 dosing (co2\_dos). Conversion from g to kg.  ||
