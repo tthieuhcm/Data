@@ -17,16 +17,16 @@
 
 |**Column heading** |**Parameter description** |**Unit** |**Interval** |**Dataset name** |**Data Type** |**Comments** |**Data collection** |
 | - | - | - | - | - | - | - | - |
-|Tout |Outside temperature  |°C |5 min  |Weather |Raw data |- |Whether station |
-|Rhout |Outside relative humidity |% |5 min  |Weather |Raw data |- |Whether station |
-|Iglob |Solar Radiation  |W/m²  |5 min  |Weather |Raw data |- |Whether station |
-|Windsp |Wind speed  |m/s  |5 min  |Weather |Raw data |- |Whether station |
-|RadSum |Radiation sum  |J/cm2  |5 min  |Weather |Raw data |- |Whether station |
-|Winddir |Wind direction  |Compass direction [0 to 128] |5 min  |Weather |Raw data |- |Whether station |
-|Rain |Rain (status 1=rain, 0=dry)  |[1=rain, 0=dry] |5 min  |Weather |Raw data |- |Whether station |
-|PARout |PAR weather measurement  |µmol/m² s  |5 min  |Weather |Raw data |- |Whether station |
-|Pyrgeo |Heat emission: pyrgeometer  |W/m²  |5 min  |Weather |Raw data |- |Whether station |
-|AbsHumOut |Absolute humidity content of outside air  |g/m³  |5 min  |Weather |Raw data |- |Whether station |
+|Tout |Outside temperature  |°C |5 min  |Weather |Raw data |- |Weather station |
+|Rhout |Outside relative humidity |% |5 min  |Weather |Raw data |- |Weather station |
+|Iglob |Solar Radiation  |W/m²  |5 min  |Weather |Raw data |- |Weather station |
+|Windsp |Wind speed  |m/s  |5 min  |Weather |Raw data |- |Weather station |
+|RadSum |Radiation sum  |J/cm2  |5 min  |Weather |Raw data |- |Weather station |
+|Winddir |Wind direction  |Compass direction [0 to 128] |5 min  |Weather |Raw data |- |Weather station |
+|Rain |Rain (status 1=rain, 0=dry)  |[1=rain, 0=dry] |5 min  |Weather |Raw data |- |Weather station |
+|PARout |PAR weather measurement  |µmol/m² s  |5 min  |Weather |Raw data |- |Weather station |
+|Pyrgeo |Heat emission: pyrgeometer  |W/m²  |5 min  |Weather |Raw data |- |Weather station |
+|AbsHumOut |Absolute humidity content of outside air  |g/m³  |5 min  |Weather |Raw data |- |Weather station |
 ||Time |Timestamps 5 min (Excel format)\_ ||Weather ||||
 # Greenhouse climate 
 
@@ -40,11 +40,11 @@
 |Rhair |Greenhouse relative humidity  |% |5 min |GreenhouseClimate |Raw data |- |Process Computer |
 |CO2air |CO2 greenhouse  |ppm |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |HumDef |Greenhouse humidity deficit  |g/m³  |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|VentLee |Leeward vents opening  |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|Ventwind |Windward vents opening  |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|AssimLight |HPS lamps status (on-off) |- [0 or 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|EnScr |Energy curtain opening  |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|BlackScr |Blackout curtain opening  |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|VentLee |Leeward vents opening  |% [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|Ventwind |Windward vents opening  |% [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|AssimLight |HPS lamps status (on-off) |% [0 or 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|EnScr |Energy curtain opening  |% [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|BlackScr |Blackout curtain opening  |% [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |PipeLow |Rail pipe Temperature (Lower circuit) |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |PipeGrow |Crop pipe Temperature (Growth circuit) |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |co2\_dos |CO2 dosing  |kg/ha hour |5 min |GreenhouseClimate |Processed data |Computed CO2 dosage and calibrated by monthly CO2 meter readings.||
@@ -64,9 +64,9 @@
 |dx\_sp |Humidity deficit setpoint |g/m³ |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |t\_rail\_min\_sp |Rail pipe minimum temperature setpoint |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |t\_grow\_min\_sp |Crop pipe minimum temperature setpoint |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|Assim\_sp |Assimilation lighting setpoint (HPS lamp) |- [0 or 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|scr\_enrg\_sp |Energy curtain setpoint |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
-|scr\_blck\_sp |Blackout curtain setpoint |- [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|Assim\_sp |Assimilation lighting setpoint (HPS lamp) |% [0 or 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|scr\_enrg\_sp |Energy curtain setpoint |% [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
+|scr\_blck\_sp |Blackout curtain setpoint |% [0 to 100] |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |t\_heat\_sp |Heating temperature setpoint |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |t\_vent\_sp |Ventilation temperature setpoint (leeward vents) |°C |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
 |window\_pos\_lee\_sp |Lee side window position minimum setpoint (leeward vents) |% |5 min  |GreenhouseClimate |Raw data |- |Process Computer |
@@ -86,9 +86,9 @@
 |dx\_vip |Humidity deficit VIP |g/m³  |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |t\_rail\_min\_vip |Rail pipe minimum temperature VIP |°C |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |t\_grow\_min\_vip |Crop pipe minimum temperature VIP |°C |5 min  |GreenhouseClimate |Raw data ||Process Computer |
-|Assim\_vip |Assimilation lighting VIP (HPS lamp)  |- [0 or 100] |5 min  |GreenhouseClimate |Raw data ||Process Computer |
-|scr\_enrg\_vip |Energy curtain VIP |- [0 or 100] |5 min  |GreenhouseClimate |Raw data ||Process Computer |
-|scr\_blck\_vip |Blackout curtain VIP |- [0 or 100] |5 min  |GreenhouseClimate |Raw data ||Process Computer |
+|Assim\_vip |Assimilation lighting VIP (HPS lamp)  |% [0 or 100] |5 min  |GreenhouseClimate |Raw data ||Process Computer |
+|scr\_enrg\_vip |Energy curtain VIP |% [0 or 100] |5 min  |GreenhouseClimate |Raw data ||Process Computer |
+|scr\_blck\_vip |Blackout curtain VIP |% [0 or 100] |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |t\_heat\_vip |Heating temperature VIP |°C |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |t\_ventlee\_vip |Ventilation temperature VIP (leeward vents) |°C |5 min  |GreenhouseClimate |Raw data ||Process Computer |
 |window\_pos\_lee\_vip |Lee side window position minimum VIP (leeward vents) |% |5 min  |GreenhouseClimate |Raw data ||Process Computer |
